@@ -6,7 +6,7 @@
 /*   By: vicmarti <vicmarti@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 20:16:15 by vicmarti          #+#    #+#             */
-/*   Updated: 2022/02/12 21:36:00 by vicmarti         ###   ########.fr       */
+/*   Updated: 2022/02/12 22:02:05 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ ScavTrap::ScavTrap(void)
 {
 	std::cout << "Default ScavTrap created" << std::endl;
 	this->_hp = 100;
-	this->_ep = 1000;
+	this->_ep = 100;
 	this->_ad = 30;
 }
 
@@ -32,7 +32,7 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	std::cout << "ScavTrap " << this->_name << " created"  << std::endl;
 	this->_name = name;
 	this->_hp = 100;
-	this->_ep = 1000;
+	this->_ep = 100;
 	this->_ad = 30;
 }
 
