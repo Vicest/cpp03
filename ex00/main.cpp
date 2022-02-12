@@ -6,7 +6,7 @@
 /*   By: vicmarti <vicmarti@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 18:18:02 by vicmarti          #+#    #+#             */
-/*   Updated: 2022/02/12 18:23:13 by vicmarti         ###   ########.fr       */
+/*   Updated: 2022/02/12 19:15:04 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,6 @@ int	main(void)
 	C.beRepaired(3);
 	C.beRepaired(3);
 	C.beRepaired(3);
+
+	C.takeDamage(100);
 }

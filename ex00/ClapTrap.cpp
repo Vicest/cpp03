@@ -6,11 +6,12 @@
 /*   By: vicmarti <vicmarti@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 14:24:19 by vicmarti          #+#    #+#             */
-/*   Updated: 2022/02/12 18:54:40 by vicmarti         ###   ########.fr       */
+/*   Updated: 2022/02/12 19:14:20 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	<iostream>
+#include	<limits>
 #include	"ClapTrap.hpp"
 
 ClapTrap::ClapTrap(void)
@@ -66,7 +67,7 @@ void	ClapTrap::takeDamage(unsigned int amount)
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
-	unsigned int	missing_hp = 10 - this->_hp;
+	unsigned int	missing_hp = std::numeric_limits<unsigned int>::max() - this->_hp;
 
 	if (missing_hp < amount)
 		amount = missing_hp;
