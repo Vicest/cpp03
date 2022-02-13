@@ -6,7 +6,7 @@
 /*   By: vicmarti <vicmarti@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 14:24:19 by vicmarti          #+#    #+#             */
-/*   Updated: 2022/02/12 19:14:20 by vicmarti         ###   ########.fr       */
+/*   Updated: 2022/02/13 17:13:45 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ ClapTrap	&ClapTrap::operator=(ClapTrap const &clapt)
 	return (*this);
 }
 
-void	ClapTrap::attack(std::string const &target)
+void	ClapTrap::attack(std::string const &target) const
 {
 	if (this->_hp == 0)
 		std::cout << "ClapTrap " << this->_name << " has no HP!" << std::endl;

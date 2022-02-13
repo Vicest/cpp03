@@ -6,7 +6,7 @@
 /*   By: vicmarti <vicmarti@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 19:04:38 by vicmarti          #+#    #+#             */
-/*   Updated: 2022/02/12 21:33:09 by vicmarti         ###   ########.fr       */
+/*   Updated: 2022/02/13 17:18:01 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ class ScavTrap : public ClapTrap
 		ScavTrap(ScavTrap const &scavt);
 		~ScavTrap(void);
 		ScavTrap	&operator=(ScavTrap const &scavt);
-		void	highFivesGuys(void);
+		void		guardGate(void);
+		void		attack(std::string const &target) const;
 	private:
 };
 #endif

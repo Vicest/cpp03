@@ -6,7 +6,7 @@
 /*   By: vicmarti <vicmarti@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 14:24:22 by vicmarti          #+#    #+#             */
-/*   Updated: 2022/02/12 20:54:49 by vicmarti         ###   ########.fr       */
+/*   Updated: 2022/02/13 17:13:24 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ class ClapTrap
 		ClapTrap(ClapTrap const &clapt);
 		~ClapTrap(void);
 		ClapTrap	&operator=(ClapTrap const &clapt);
-		void	attack(std::string const &target);
-		void	takeDamage(unsigned int amount);
-		void	beRepaired(unsigned int amount);
+		virtual void	attack(std::string const &target) const;
+		void			takeDamage(unsigned int amount);
+		void			beRepaired(unsigned int amount);
 	protected:
 		std::string		_name;
 		unsigned int	_hp;

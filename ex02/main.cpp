@@ -6,7 +6,7 @@
 /*   By: vicmarti <vicmarti@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 18:18:02 by vicmarti          #+#    #+#             */
-/*   Updated: 2022/02/12 21:33:35 by vicmarti         ###   ########.fr       */
+/*   Updated: 2022/02/13 17:42:54 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,52 @@ static void	line(void)
 int	main(void)
 {
 	{
-		FragTrap	A;
+		ClapTrap	A;
 		line();
-		FragTrap	B(A);
+		ClapTrap	B(A);
 		line();
-		FragTrap	C("Terminator");
+		ClapTrap	C("Terminator");
 		line();
-		FragTrap	D(C);
+
+		A.attack("Sheep");
+		line();
+		C.attack("Nope, not a name");
+		line();
+
+		C.takeDamage(4);
+		line();
+		C.takeDamage(4);
+		line();
+		C.takeDamage(4);
+		line();
+		C.takeDamage(4);
+		line();
+
+		C.attack("Don't printr");
+		line();
+
+		C.beRepaired(3);
+		line();
+		C.beRepaired(3);
+		line();
+		C.beRepaired(3);
+		line();
+		C.beRepaired(3);
+		line();
+		C.beRepaired(3);
+		line();
+
+		C.takeDamage(100);
+		line();
+	}
+	{
+		ScavTrap	A;
+		line();
+		ScavTrap	B(A);
+		line();
+		ScavTrap	C("Terminator");
+		line();
+		ScavTrap	D(C);
 		line();
 
 		D.attack("Test");
@@ -71,13 +110,13 @@ int	main(void)
 		line();
 	}
 	{
-		ScavTrap	A;
+		FragTrap	A;
 		line();
-		ScavTrap	B(A);
+		FragTrap	B(A);
 		line();
-		ScavTrap	C("Terminator");
+		FragTrap	C("Terminator");
 		line();
-		ScavTrap	D(C);
+		FragTrap	D(C);
 		line();
 
 		D.attack("Test");

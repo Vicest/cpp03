@@ -10,7 +10,7 @@ OBJS:=$(SRCS:.cpp=.o)
 OBJS+=$(CLASS:.cpp=.o)
 
 CC=g++
-CPPFLAGS=-std=c++98 -Wall -Werror -Wextra -Wshadow
+CPPFLAGS=-std=c++98 -Wall -Werror -Wextra -Wno-shadow
 
 .PHONY: all clean fclean re
 
@@ -19,7 +19,7 @@ all : $(NAME)
 $(NAME) : $(OBJS) $(HEAD)
 	$(CC) $(CPPFLAGS) $(OBJS) -o $@
 
-%.o : %.cpp
+%.o : %.cpp $(HEAD)
 	$(CC) $(CPPFLAGS) $< -c -o $@
 
 clean :

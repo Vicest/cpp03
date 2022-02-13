@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vicmarti <vicmarti@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 19:04:38 by vicmarti          #+#    #+#             */
-/*   Updated: 2022/02/12 21:29:59 by vicmarti         ###   ########.fr       */
+/*   Updated: 2022/02/13 17:18:01 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 # include <string>
 # include "ClapTrap.hpp"
-class FragTrap : public ClapTrap
+class ScavTrap : public ClapTrap
 {
 	public:
-		FragTrap(void);
-		FragTrap(std::string name);
-		FragTrap(FragTrap const &fragt);
-		~FragTrap(void);
-		FragTrap	&operator=(FragTrap const &fragt);
-		void	guardGate(void);
+		ScavTrap(void);
+		ScavTrap(std::string name);
+		ScavTrap(ScavTrap const &scavt);
+		~ScavTrap(void);
+		ScavTrap	&operator=(ScavTrap const &scavt);
+		void		guardGate(void);
+		void		attack(std::string const &target) const;
 	private:
 };
 #endif

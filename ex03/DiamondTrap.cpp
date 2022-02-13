@@ -6,7 +6,7 @@
 /*   By: vicmarti <vicmarti@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 22:00:51 by vicmarti          #+#    #+#             */
-/*   Updated: 2022/02/12 23:03:15 by vicmarti         ###   ########.fr       */
+/*   Updated: 2022/02/13 18:04:57 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ DiamondTrap	&DiamondTrap::operator=(DiamondTrap const &diamondt)
 	return (*this);
 }
 
-void	DiamondTrap::attack(std::string const &target)
+void	DiamondTrap::attack(std::string const &target) const
 {
 	this->ScavTrap::attack(target);
 }

@@ -1,7 +1,7 @@
 NAME=main
 
 CLASS:=ClapTrap.cpp
-CLASS+=FragTrap.cpp
+CLASS+=ScavTrap.cpp
 HEAD:=$(CLASS:.cpp=.hpp)
 SRCS:=main.cpp
 OBJS:=$(SRCS:.cpp=.o)
@@ -17,7 +17,7 @@ all : $(NAME)
 $(NAME) : $(OBJS) $(HEAD)
 	$(CC) $(CPPFLAGS) $(OBJS) -o $@
 
-%.o : %.cpp
+%.o : %.cpp $(HEAD)
 	$(CC) $(CPPFLAGS) $< -c -o $@
 
 clean :
@@ -26,4 +26,4 @@ clean :
 fclean : clean
 	rm -f $(NAME)
 
-re : fclean all
+e : fclean all

@@ -6,7 +6,7 @@
 /*   By: vicmarti <vicmarti@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 19:04:38 by vicmarti          #+#    #+#             */
-/*   Updated: 2022/02/12 20:52:37 by vicmarti         ###   ########.fr       */
+/*   Updated: 2022/02/13 17:33:22 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,11 @@ class FragTrap : public ClapTrap
 	public:
 		FragTrap(void);
 		FragTrap(std::string name);
-		FragTrap(FragTrap const &clapt);
+		FragTrap(FragTrap const &fragt);
 		~FragTrap(void);
 		FragTrap	&operator=(FragTrap const &fragt);
-		void	guardGate(void);
+		void		highFivesGuys(void);
+		void		attack(std::string const &target) const;
 	private:
 };
 #endif

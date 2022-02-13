@@ -6,7 +6,7 @@
 /*   By: vicmarti <vicmarti@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/12 20:16:15 by vicmarti          #+#    #+#             */
-/*   Updated: 2022/02/12 21:03:38 by vicmarti         ###   ########.fr       */
+/*   Updated: 2022/02/13 17:32:01 by vicmarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ FragTrap::FragTrap(void)
 {
 	std::cout << "Default FragTrap created" << std::endl;
 	this->_hp = 100;
-	this->_ep = 50;
-	this->_ad = 20;
+	this->_ep = 100;
+	this->_ad = 30;
 }
 
 FragTrap::FragTrap(FragTrap const &fragt) : ClapTrap(fragt._name)
@@ -32,8 +32,8 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 	std::cout << "FragTrap " << this->_name << " created"  << std::endl;
 	this->_name = name;
 	this->_hp = 100;
-	this->_ep = 50;
-	this->_ad = 20;
+	this->_ep = 100;
+	this->_ad = 30;
 }
 
 FragTrap::~FragTrap(void)
@@ -51,10 +51,16 @@ FragTrap	&FragTrap::operator=(FragTrap const &fragt)
 	return (*this);
 }
 
-void	FragTrap::guardGate(void)
+void	FragTrap::attack(std::string const &target) const
 {
 	if (this->_hp == 0)
-		std::cout << this->_name << " has no HP and can't HODOR" << std::endl;
+		std::cout << "FragTrap " << this->_name << " has no HP!" << std::endl;
 	else
-		std::cout << this->_name << " says: HODOR!" << std::endl;
+		std::cout << "FragTrap " << this->_name << " attacks " << target
+			<< " causing " << this->_ad << "points of damage!" << std::endl;
+}
+
+void	FragTrap::highFivesGuys(void)
+{
+	std::cout << this->_name << " requests a high five."  << std::endl;
 }
